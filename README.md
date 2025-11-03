@@ -9,7 +9,7 @@ This project uses **NVIDIA CUDA** to convert RGB images to grayscale, leveraging
 **Performance benchmarking**  
 **Runs directly on Google Colab** – no local CUDA setup required  
 
-## **🛠️ Setup Guide**
+## **Setup Guide**
 
 ### **1️. Launch Google Colab**
 - Go to [Google Colab](https://colab.research.google.com/)
@@ -27,7 +27,7 @@ Paste this in the first code cell:
 ```python
 !nvidia-smi
 print("\n" + "="*50)
-print("✅ GPU is available and ready!")
+print("GPU is available and ready!")
 ```
 
 ## **Running the Processor**
@@ -109,15 +109,15 @@ Paste this code to inspect processing statistics:
 ```python
 import os
 
-print("📈 DETAILED PROCESSING ANALYSIS")
+print("DETAILED PROCESSING ANALYSIS")
 print("="*60)
 
 input_count = len([f for f in os.listdir('random_color_images') if f.endswith('.jpg')])
 output_count = len([f for f in os.listdir('random_greyscaled_images') if f.endswith('.jpg')])
 
-print(f"📁 Input Images: {input_count}")
-print(f"📁 Grayscale Outputs: {output_count}")
-print(f"✅ Success Rate: {(output_count / input_count) * 100:.1f}%")
+print(f"Input Images: {input_count}")
+print(f"Grayscale Outputs: {output_count}")
+print(f"Success Rate: {(output_count / input_count) * 100:.1f}%")
 
 def get_dir_size(path):
     total = 0
@@ -130,11 +130,11 @@ def get_dir_size(path):
 input_size = get_dir_size('random_color_images')
 output_size = get_dir_size('random_greyscaled_images')
 
-print(f"💾 Input Size: {input_size:.2f} MB")
-print(f"💾 Output Size: {output_size:.2f} MB")
-print(f"🗜️ Compression Ratio: {input_size / output_size:.2f}x")
+print(f"Input Size: {input_size:.2f} MB")
+print(f"Output Size: {output_size:.2f} MB")
+print(f"Compression Ratio: {input_size / output_size:.2f}x")
 
-print("\n📋 SAMPLE GENERATED FILES:")
+print("\n SAMPLE GENERATED FILES:")
 for filename in sorted(os.listdir('random_color_images'))[:10]:
     print(f"   • {filename}")
 if input_count > 10:
