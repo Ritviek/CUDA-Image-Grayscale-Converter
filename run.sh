@@ -74,7 +74,7 @@ compile_program() {
         OPENCV_FLAGS="-lopencv_core -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui"
     fi
 
-    nvcc $NVCC_FLAGS -o Convert_RGB_to_Grey Convert_RGB_to_Grey.cu $OPENCV_FLAGS
+    nvcc $NVCC_FLAGS -o convertRGBToGrey convertRGBToGrey.cu $OPENCV_FLAGS
     print_status "Compilation successful"
 }
 
@@ -137,19 +137,19 @@ run_tests() {
     mkdir -p random_greyscaled_images comparison_images
 
     echo "=== Test 1: Basic Processing ==="
-    ./Convert_RGB_to_Grey --input random_color_images --output random_greyscaled_images
+    ./convertRGBToGrey --input random_color_images --output random_greyscaled_images
 
     echo "=== Test 2: Optimized Kernel ==="
-    ./Convert_RGB_to_Grey --input random_color_images --output random_greyscaled_images --optimized
+    ./convertRGBToGrey --input random_color_images --output random_greyscaled_images --optimized
 
     echo "=== Test 3: Single Image with Benchmark ==="
     if [ -f "random_color_images/large_test.jpg" ]; then
-        ./Convert_RGB_to_Grey --input random_color_images/large_test.jpg \
+        ./convertRGBToGrey --input random_color_images/large_test.jpg \
             --output comparison_images/large_test_greyscale.jpg --benchmark --optimized
     fi
 
     echo "=== Test 4: Performance Comparison ==="
-    ./Convert_RGB_to_Grey --input random_color_images \
+    ./convertRGBToGrey --input random_color_images \
         --output comparison_images --benchmark --optimized
 }
 
