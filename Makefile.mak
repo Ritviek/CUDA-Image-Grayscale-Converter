@@ -20,8 +20,8 @@ LIBDIRS = -L/usr/local/cuda/lib64
 LIBS = -lcudart $(OPENCV_FLAGS)
 
 # Source files
-CUDA_SOURCES = Convert_RGB_to_Grey.cu
-HEADERS = Convert_RGB_to_Grey.hpp
+CUDA_SOURCES = convertRGBToGrey.cu
+HEADERS = convertRGBToGrey.hpp
 
 # Target executable
 TARGET = convertRGBToGrey
