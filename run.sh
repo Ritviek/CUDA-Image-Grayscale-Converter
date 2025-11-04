@@ -1,7 +1,5 @@
 #!/bin/bash
 
-# run.sh - Automated execution script for CUDA RGB to Greyscale Image Processor
-
 set -e  # Exit on any error
 
 # -------------------- Utility Functions --------------------
