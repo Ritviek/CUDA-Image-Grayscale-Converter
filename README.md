@@ -84,7 +84,7 @@ else:
         ax1.set_title(f"Original\n{os.path.basename(img_path)}", fontsize=9)
         ax1.axis('off')
         
-        # Greyscale
+        # Grayscale
         filename = os.path.splitext(os.path.basename(img_path))[0]
         grey_path = f'random_greyscaled_images/{filename}_greyscale.jpg'
         ax2 = plt.subplot(rows, cols, (row_pair * 2 + 1) * cols + col + 1)
@@ -92,7 +92,7 @@ else:
         if os.path.exists(grey_path):
             grey = cv2.imread(grey_path, cv2.IMREAD_GRAYSCALE)
             ax2.imshow(grey, cmap='grey')
-            ax2.set_title(f"Greyscale\n{os.path.basename(grey_path)}", fontsize=9)
+            ax2.set_title(f"Grayscale\n{os.path.basename(grey_path)}", fontsize=9)
         else:
             ax2.text(0.5, 0.5, "Not Found", ha='center', va='center')
             ax2.set_title("Missing")
@@ -116,7 +116,7 @@ input_count = len([f for f in os.listdir('random_color_images') if f.endswith('.
 output_count = len([f for f in os.listdir('random_greyscaled_images') if f.endswith('.jpg')])
 
 print(f"Input Images: {input_count}")
-print(f"Greyscale Outputs: {output_count}")
+print(f"Grayscale Outputs: {output_count}")
 print(f"Success Rate: {(output_count / input_count) * 100:.1f}%")
 
 def get_dir_size(path):
@@ -147,7 +147,7 @@ if input_count > 10:
 cuda-image-greyscale-converter/
 ├── comparison_images/            # Benchmark comparison outputs
 ├── random_color_images/          # Generated input images
-├── random_greyscaled_images/     # Greyscale outputs
+├── random_greyscaled_images/     # Grayscale outputs
 ├── convertRGBToGrey.cu           # CUDA kernel code
 ├── convertRGBToGrey.hpp          # Header file
 ├── Makefile                      # Build configuration
