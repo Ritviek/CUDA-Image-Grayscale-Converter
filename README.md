@@ -1,4 +1,5 @@
-# **CUDA RGB to Grayscale Image Processor**
+```markdown
+# **CUDA Image Grayscale Converter**
 
 This project uses **NVIDIA CUDA** to convert RGB images to grayscale, leveraging **GPU acceleration** for high-performance image processing. It runs smoothly on **Google Colab**, automatically handling all dependencies and image generation steps.
 
@@ -37,8 +38,8 @@ Paste this into a new code cell, it should execute in about 30-40 seconds:
 
 ```bash
 # Clone repo and execute
-!git clone https://github.com/NadG17/cuda-rgb-greyscale-processor.git
-%cd cuda-rgb-greyscale-processor
+!git clone https://github.com/NadG17/cuda-image-grayscale-converter.git
+%cd cuda-image-grayscale-converter
 !chmod +x run.sh && ./run.sh
 ```
 
@@ -144,7 +145,7 @@ if input_count > 10:
 ## **Project Structure**
 
 ```
-cuda-rgb-greyscale-processor/
+cuda-image-grayscale-converter/
 ├── comparison_images/            # Benchmark comparison outputs
 ├── random_color_images/          # Generated input images
 ├── random_greyscaled_images/     # Grayscale outputs
@@ -155,4 +156,5 @@ cuda-rgb-greyscale-processor/
 ├── README.md                     # You're reading it!
 ├── execution_log.txt             # GPU execution logs
 └── performance_report.md         # Summary of benchmarks
+```
 ```
