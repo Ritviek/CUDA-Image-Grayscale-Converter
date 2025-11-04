@@ -1,4 +1,3 @@
-```markdown
 # **CUDA Image Grayscale Converter**
 
 This project uses **NVIDIA CUDA** to convert RGB images to grayscale, leveraging **GPU acceleration** for high-performance image processing. It runs smoothly on **Google Colab**, automatically handling all dependencies and image generation steps.
@@ -156,5 +155,4 @@ cuda-image-grayscale-converter/
 ├── README.md                     # You're reading it!
 ├── execution_log.txt             # GPU execution logs
 └── performance_report.md         # Summary of benchmarks
-```
 ```
