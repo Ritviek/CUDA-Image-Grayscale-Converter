@@ -253,7 +253,7 @@ void benchmarkComparison(const std::string& imagePath) {
 }
 
 int main(int argc, char* argv[]) {
-    printf("CUDA RGB to Greyscale Image Processor\n");
+    printf("CUDA Image Grayscale Converter\n");
     printf("=====================================\n");
     
     // Check CUDA device
